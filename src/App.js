@@ -1,25 +1,41 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './header'
+import Header from './components/header'
+import User from './components/User'
 
-const name = "Mehmet";
-const surname= "ASDFGH";
-const isloggedin = true; 
+const friends = [
+  {
+    name: "Ali",
+    id: 1
+  },
+  {
+    name: "Mehmet",
+    id: 2
+  },
+  {
+    name: "Fatma",
+    id: 3
+  }
+]
 
 
 function App() {
   return (
 
     <div className="App">
-      <Header />
-      {/* <h1>{name} {surname}</h1> */}
-      {/* <h2> {isloggedin && `Benim adim ${name}, soyadim ${surname}`}</h2>
-      <h2> {!isloggedin && `HATALI GIRIS YAPTINIZ`}</h2> */}
-      <h2> {isloggedin ? `Benim adim ${name}, soyadim ${surname}`: `HATALI GIRIS YAPTINIZ`}</h2>
-      Hello World
-
+      <User 
+      name= "Orkun" 
+      surname="UZUNDERE" 
+      isLoggedin= {true} 
+      age={'30'} 
+      friends={friends}
+      adress = {{
+        title: 'Bayrakli / Izmir',
+        zip: 35535
+      }}/>
     </div>
   );
 }
 
 export default App;
+ 
